@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_gravity="center_vertical"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="30sp"
-        android:text="Hello EveryOne!!" />
+        android:text="Hello EveryOne!!"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/rollButton"
@@ -30,5 +30,5 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:text="@string/count_up_button"
-        android:textColor="@color/colorBlue"/>
+        android:textColor="@color/colorBlue" />
 </LinearLayout>
