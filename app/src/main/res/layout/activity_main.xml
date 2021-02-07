@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/dice_1"
-        android:textSize="30sp" />
+        android:src="@drawable/empty_dice"
+        tools:src="@drawable/dice_1" /> <!-- この画像はプレビューのみ表示。コンパイル時に消える -->
 
     <Button
         android:id="@+id/rollButton"
@@ -25,27 +25,27 @@
 
     <!-- ~~~~~~~~~~【カウントアップで使ったコード】~~~~~~~~~~ -->
 
-<!--    <Button-->
-<!--        android:id="@+id/countUpButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:text="@string/count_up_button"-->
-<!--        android:textColor="@color/colorBlue" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/countUpButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:text="@string/count_up_button"-->
+    <!--        android:textColor="@color/colorBlue" />-->
 
     <!-- ~~~~~~~~~~【カウントアップで使ったコード】~~~~~~~~~~ -->
 
     <!-- ~~~~~~~~~~【リセットで使ったコード】~~~~~~~~~~ -->
 
-<!--    <Button-->
-<!--        android:id="@+id/resetButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:text="@string/reset_button"-->
-<!--        android:textColor="@color/colorRed" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/resetButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:text="@string/reset_button"-->
+    <!--        android:textColor="@color/colorRed" />-->
 
     <!-- ~~~~~~~~~~【リセットで使ったコード】~~~~~~~~~~ -->
 </LinearLayout>
