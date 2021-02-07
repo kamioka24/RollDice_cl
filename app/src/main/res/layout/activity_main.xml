@@ -31,4 +31,13 @@
         android:layout_marginTop="10dp"
         android:text="@string/count_up_button"
         android:textColor="@color/colorBlue" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="@string/reset_button"
+        android:textColor="@color/colorRed" />
 </LinearLayout>

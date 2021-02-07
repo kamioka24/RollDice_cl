@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         val countUpButton: Button = findViewById(R.id.countUpButton) // main.xmlのButton(id/countUpButton)を呼び出す
         countUpButton.setOnClickListener { plusOne() } // countUpButtonを押した際にplusOne関数が走る
+
+        val resetButton: Button = findViewById(R.id.resetButton)
+        resetButton.setOnClickListener { reset() }
     }
 
     private fun rollDaice() {
@@ -24,12 +27,13 @@ class MainActivity : AppCompatActivity() {
         val resultText: TextView = findViewById(R.id.resultText)
 
         resultText.text = randomInt.toString()
-//        Toast.makeText(this, "ボタンを押しました！", // ボタンを押すと指定したテキストが出る
+//        Toast.makeText(this, "サイコロを振ります！", // ボタンを押すと指定したテキストが出る
 //            Toast.LENGTH_SHORT).show() // 短い間の表示
     }
 
     private fun plusOne() {
         val resultText: TextView = findViewById(R.id.resultText)
+//        Toast.makeText(this, "1を足します！",  Toast.LENGTH_SHORT).show()
 
         if (resultText.text == "Hello EveryOne!!") {
             resultText.text = "1"
@@ -39,7 +43,15 @@ class MainActivity : AppCompatActivity() {
             if (plusOneResult < 6) {
                 plusOneResult++
                 resultText.text = plusOneResult.toString() // 再び結果を文字列に戻す
+            } else {
+                resultText.text = "0" // 6のときは0にする
             }
         }
+    }
+
+    private fun reset() {
+        val resultText: TextView = findViewById(R.id.resultText)
+        resultText.text = "0"
+        Toast.makeText(this, "リセットされました。", Toast.LENGTH_SHORT).show()
     }
 }
