@@ -1,4 +1,4 @@
-package com.example.codelabs_practiceapp
+package com.example.RollDice_cl
 
 import org.junit.Test
 

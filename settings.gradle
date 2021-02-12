@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Codelabs_PracticeApp"
+rootProject.name = "RollDice_cl"

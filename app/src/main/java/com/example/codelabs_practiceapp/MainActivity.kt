@@ -1,17 +1,16 @@
-package com.example.codelabs_practiceapp
+package com.example.RollDice_cl
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var diceImage1 : ImageView
-    lateinit var diceImage2 : ImageView
+    lateinit var diceImage1 : ImageView // nullable を宣言する必要がないようにしている？(コードラボに書いてあった)
+    lateinit var diceImage2 : ImageView // 初期化のタイミングをonCreateまで遅らせる。必ず var で宣言しなくてはならない
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +31,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDaice() {
-        diceImage1.setImageResource(getRandomDiceImage()) // diceImageの更新
-        diceImage2.setImageResource(getRandomDiceImage()) // diceImageの更新
+        diceImage1.setImageResource(getRandomDiceImage()) // diceImage1の更新
+        diceImage2.setImageResource(getRandomDiceImage()) // diceImage2の更新
     }
 
     private fun getRandomDiceImage(): Int {
