@@ -9,12 +9,20 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var diceImage1 : ImageView
+    lateinit var diceImage2 : ImageView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val rollButton: Button = findViewById(R.id.rollButton) // main.xmlのButtonView(id/rollButton)を呼び出す
         rollButton.setOnClickListener { rollDaice() } // rollButtonを押した際にrollDice関数が走る
+
+        diceImage1 = findViewById(R.id.diceImage1)
+        diceImage2 = findViewById(R.id.diceImage2)
 
 //        val countUpButton: Button = findViewById(R.id.countUpButton)
 //        countUpButton.setOnClickListener { plusOne() }
@@ -24,10 +32,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDaice() {
-        val randomInt = (1..6).random()
-        val diceImage: ImageView = findViewById(R.id.diceImage)
+        diceImage1.setImageResource(getRandomDiceImage()) // diceImageの更新
+        diceImage2.setImageResource(getRandomDiceImage()) // diceImageの更新
+    }
 
-        val drawableResource = when (randomInt) {
+    private fun getRandomDiceImage(): Int {
+        val randomInt = (1..6).random()
+
+        return when (randomInt) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
@@ -35,7 +47,6 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        diceImage.setImageResource(drawableResource) // diceImageの更新
 
 //        Toast.makeText(this, "サイコロを振ります！", // ボタンを押すと指定したテキストが出る
 //            Toast.LENGTH_SHORT).show() // 短い間の表示
